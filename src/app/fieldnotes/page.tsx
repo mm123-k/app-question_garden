@@ -2,7 +2,7 @@
 
 import { db, FieldNote } from "@/lib/db/schema";
 import { useLiveQuery } from "dexie-react-hooks";
-import { Calendar, BookOpen, Plus, PenLine, Leaf, Feather, Eye } from "lucide-react";
+import { Calendar, BookOpen, Plus, PenLine, Leaf, Feather, Eye, Settings} from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -241,6 +241,7 @@ export default function FieldNotesPage() {
                     { href: "/", Icon: Leaf, label: "問い" },
                     { href: "/fieldnotes", Icon: Feather, label: "日記" },
                     { href: "/reunion", Icon: Eye, label: "再会" },
+                    { href: "/settings", Icon: Settings, label: "設定" },
                 ].map(({ href, Icon, label }) => (
                     <Link key={href} href={href} style={{ textDecoration: "none" }}>
                         <div style={{
